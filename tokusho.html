@@ -3,116 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>特定商取引法に基づく表示 / Specified Commercial Transactions - Visitlio</title>
+<title>Legal Notice - Visitlio</title>
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; max-width: 800px; margin: 0 auto; padding: 24px 16px; color: #222; line-height: 1.8; }
-  h1 { font-size: 22px; border-bottom: 2px solid #1565C0; padding-bottom: 8px; color: #1565C0; }
-  table { width: 100%; border-collapse: collapse; margin-top: 24px; }
-  th, td { border: 1px solid #ddd; padding: 12px 16px; font-size: 15px; vertical-align: top; }
-  th { background: #EEF4FF; color: #1565C0; width: 35%; font-weight: bold; white-space: nowrap; }
-  td { width: 65%; }
-  .updated { color: #888; font-size: 13px; margin-bottom: 24px; }
-  .en { color: #555; font-size: 13px; }
-  a { color: #1565C0; }
-  .lang-divider { border: none; border-top: 3px solid #1565C0; margin: 48px 0; }
+    * { box-sizing: border-box; }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+    }
+    .container {
+        background: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .lang-switcher {
+        text-align: right;
+        margin-bottom: 24px;
+    }
+    .lang-switcher button {
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 6px 14px;
+        font-size: 13px;
+        cursor: pointer;
+        margin-left: 6px;
+        color: #555;
+    }
+    .lang-switcher button.active {
+        background: #1565C0;
+        color: #fff;
+        border-color: #1565C0;
+    }
+    h1 { font-size: 24px; border-bottom: 2px solid #1565C0; padding-bottom: 10px; margin-bottom: 24px; color: #1565C0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+    th, td { text-align: left; padding: 15px; border-bottom: 1px solid #eee; vertical-align: top; }
+    th { width: 30%; background-color: #fafafa; font-weight: bold; font-size: 14px; color: #333; }
+    td { font-size: 14px; color: #555; line-height: 1.7; }
+    .note-box {
+        background-color: #fafafa;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        padding: 20px;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 30px;
+    }
+    .footer { margin-top: 50px; font-size: 13px; color: #999; text-align: center; }
+    .hidden { display: none; }
+    a { color: #1565C0; }
 </style>
 </head>
 <body>
+<div class="container">
+    <div class="lang-switcher">
+        <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+        <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
 
-<!-- 日本語 -->
-<h1>特定商取引法に基づく表示</h1>
-<p class="updated">最終更新日：2026年6月7日</p>
+    <!-- 日本語 -->
+    <div id="content-ja">
+        <h1>特定商取引法に基づく表記</h1>
+        <table>
+            <tr>
+                <th>販売業者</th>
+                <td>BunDev</td>
+            </tr>
+            <tr>
+                <th>所在地</th>
+                <td>〒105-0013<br>東京都港区浜松町２丁目２番１５号 浜松町ダイヤビル２Ｆ</td>
+            </tr>
+            <tr>
+                <th>お問い合わせ先</th>
+                <td><a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a><br>
+                ※電話番号については、上記メールアドレス宛にご請求いただいた場合、遅滞なく開示します。</td>
+            </tr>
+            <tr>
+                <th>販売商品</th>
+                <td>Visitlio プレミアム（買い切り型アプリ内課金）<br>
+                    内容：複数プロフィール・カスタムアイコン・写真添付無制限・印刷／PDF化・通院記録フィルタ</td>
+            </tr>
+            <tr>
+                <th>販売価格</th>
+                <td>¥500（税込）<br>無料機能は価格なしでご利用いただけます。</td>
+            </tr>
+            <tr>
+                <th>代金の支払い時期</th>
+                <td>購入確定時にGoogle Play決済を通じてお支払いいただきます。</td>
+            </tr>
+            <tr>
+                <th>商品の引き渡し時期</th>
+                <td>決済手続き完了後、アプリ内で即時にプレミアム機能が有効化されます。</td>
+            </tr>
+            <tr>
+                <th>返品・キャンセル</th>
+                <td>デジタルコンテンツの性質上、購入確定後の返品および返金は原則として受け付けておりません。ただし、Google Playストアのポリシーに基づく払い戻しについては、Google社の定める手続きに従います。</td>
+            </tr>
+            <tr>
+                <th>動作環境</th>
+                <td>Android 8.0（API レベル 26）以上を搭載したデバイス。</td>
+            </tr>
+        </table>
+        <div class="footer">
+            最終更新日：2026年6月7日<br>
+            © 2026 BunDev
+        </div>
+    </div>
 
-<table>
-  <tr>
-    <th>販売業者</th>
-    <td>BunDev</td>
-  </tr>
-  <tr>
-    <th>所在地</th>
-    <td>〒105-0013　東京都港区浜松町２丁目２番１５号　浜松町ダイヤビル２Ｆ<br>
-    ※お問い合わせはメールにてお願いします。</td>
-  </tr>
-  <tr>
-    <th>お問い合わせ</th>
-    <td><a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a><br>
-    受付時間：不定期（通常3営業日以内に返信）</td>
-  </tr>
-  <tr>
-    <th>販売価格</th>
-    <td>Proプラン：¥500（税込）<br>
-    無料機能は価格なしでご利用いただけます。</td>
-  </tr>
-  <tr>
-    <th>支払方法</th>
-    <td>Google Playストアの決済方法（クレジットカード等）</td>
-  </tr>
-  <tr>
-    <th>支払時期</th>
-    <td>Google Playストアを通じた購入確定時</td>
-  </tr>
-  <tr>
-    <th>商品の引き渡し時期</th>
-    <td>購入完了後、即時にアプリ内でProプランが有効になります。</td>
-  </tr>
-  <tr>
-    <th>返品・キャンセル</th>
-    <td>デジタルコンテンツの性質上、購入後の返品・キャンセルはお受けできません。ただし、Google Playの返金ポリシーに従い、購入後一定期間内はGoogle Play経由での返金申請が可能な場合があります。</td>
-  </tr>
-  <tr>
-    <th>動作環境</th>
-    <td>Android 8.0（API 26）以上</td>
-  </tr>
-</table>
+    <!-- English -->
+    <div id="content-en" class="hidden">
+        <h1>Legal Notice</h1>
+        <div class="note-box">
+            This page contains disclosures required under Japan's Act on Specified Commercial Transactions. The following information is provided for transparency to all users.
+        </div>
 
-<hr class="lang-divider">
+        <table>
+            <tr>
+                <th>Seller</th>
+                <td>BunDev (Independent Developer)</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013, Japan<br>Hamamatsucho Diamond Building 2F</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td><a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a><br>
+                Phone number will be disclosed without delay upon request via the email address above.</td>
+            </tr>
+            <tr>
+                <th>Product</th>
+                <td>Visitlio Premium (one-time in-app purchase)<br>
+                    Includes: multiple profiles, custom icon, unlimited photo attachments, print/PDF export, visit record filtering</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>¥500 (tax included)<br>Free features are available at no charge.</td>
+            </tr>
+            <tr>
+                <th>Payment</th>
+                <td>Charged at the time of purchase via Google Play.</td>
+            </tr>
+            <tr>
+                <th>Delivery</th>
+                <td>Premium features are activated immediately after payment is completed.</td>
+            </tr>
+            <tr>
+                <th>Refunds</th>
+                <td>Due to the nature of digital content, refunds are generally not accepted after purchase. Refunds via Google Play are subject to Google's refund policy.</td>
+            </tr>
+            <tr>
+                <th>Requirements</th>
+                <td>Android 8.0 (API level 26) or higher.</td>
+            </tr>
+        </table>
 
-<!-- English -->
-<h1>Specified Commercial Transactions Act Disclosure</h1>
-<p class="updated">Last updated: June 7, 2026</p>
+        <div class="footer">
+            Last Updated: June 7, 2026<br>
+            © 2026 BunDev
+        </div>
+    </div>
+</div>
 
-<table>
-  <tr>
-    <th>Seller</th>
-    <td>BunDev</td>
-  </tr>
-  <tr>
-    <th>Address</th>
-    <td>2-2-15 Hamamatsucho, Minato-ku, Tokyo 105-0013, Japan<br>
-    Hamamatsucho Diamond Building 2F<br>
-    * Please contact us by email.</td>
-  </tr>
-  <tr>
-    <th>Contact</th>
-    <td><a href="mailto:support.bun.apps@gmail.com">support.bun.apps@gmail.com</a><br>
-    Response time: Irregular (typically within 3 business days)</td>
-  </tr>
-  <tr>
-    <th>Price</th>
-    <td>Pro Plan: ¥500 (tax included)<br>
-    Free features are available at no charge.</td>
-  </tr>
-  <tr>
-    <th>Payment Method</th>
-    <td>Payment methods available on the Google Play Store (credit card, etc.)</td>
-  </tr>
-  <tr>
-    <th>Payment Timing</th>
-    <td>At the time of purchase confirmation via Google Play Store</td>
-  </tr>
-  <tr>
-    <th>Delivery</th>
-    <td>The Pro plan is activated immediately within the app upon purchase completion.</td>
-  </tr>
-  <tr>
-    <th>Returns / Cancellations</th>
-    <td>Due to the nature of digital content, returns and cancellations after purchase are not accepted. However, refund requests may be possible within a certain period after purchase via Google Play, subject to Google Play's refund policy.</td>
-  </tr>
-  <tr>
-    <th>System Requirements</th>
-    <td>Android 8.0 (API 26) or higher</td>
-  </tr>
-</table>
-
+<script>
+function setLang(lang) {
+    document.getElementById('content-ja').classList.toggle('hidden', lang !== 'ja');
+    document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+}
+</script>
 </body>
 </html>
